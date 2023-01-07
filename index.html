@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Carousel | Reflection</title>
+    <style>
+        body{
+            background-color: #222;
+        }
+        .carousel .track{
+            width: 3000px;
+            animation: slide 20s linear infinite;
+           
+        }
+        .carousel{
+           
+            width: 800px;
+            height: 600px;
+            margin: 100px auto;
+           overflow: hidden;
+
+        }
+        .carousel .slide{
+         
+          display: inline-block; 
+          margin-left: 100px;
+          margin-right: 100px;
+        }
+        .carousel .slide img{
+            display: block;
+           
+        }
+        .carousel .slide .reflection{
+            width: 600px;
+            height: 200px;
+            background-size: 100% 100p%;
+            transform: scaleY(-1);
+            margin-top: 5px;
+            filter: blur(15px)
+            
+
+        }
+        .carousel .slide:nth-child(1) .reflection {
+              background-image:
+              linear-gradient(#222, rgb(35, 22, 22), transparent) ,
+              url(images/zacat.jpg);
+        }
+        .carousel .slide:nth-child(2) .reflection {
+           background-image:
+            url(images/reca.jpg);
+        }
+        .carousel .slide:nth-child(3) .reflection {
+            background-image: url(images/vid.jpg);
+        }
+        @keyframes slide{
+            
+            0% {margin-left: 0;}
+            25% {margin-left: 0;}
+            33.33% {margin-left: -800px;}
+            58.33% {margin-left: -800px;}
+            66.66% {margin-left: -1600px;}
+            91.66% {margin-left: -1600px;}
+        }
+       
+    </style>
+</head>
+<body>
+    <section class="carousel">
+        <div class="track">
+     <div class="slide">
+        <img src="images/zacat.jpg" alt="slide 1"/>
+    <div class="reflection"></div>
+      </div>
+
+     <div class="slide">
+        <img src="images/reca.jpg" alt="slide 2"/>
+        <div class="reflection"></div>
+     </div>
+
+     <div class="slide">
+        <img src="images/vid.jpg" alt="slide 3">
+        <div class="reflection"></div>
+     </div>
+
+    </div>
+    
+    </section>
+    
+</body>
+</html>
